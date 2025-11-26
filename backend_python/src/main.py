@@ -16,7 +16,7 @@ BASE_DIR = Path(__file__).parent
 MODEL_PATH = (BASE_DIR / "../trained_models/local/best_m.pt").resolve()
 CAPTURED_DIR = (BASE_DIR / "../captured_images").resolve()
 CAPTURED_DIR.mkdir(parents=True, exist_ok=True)
-CSV_FILE = Path("medidas_contador.csv")
+CSV_FILE = Path(__file__).parent / "../medidas_contador.csv"
 
 # Load Model
 model = YOLO(MODEL_PATH) 
