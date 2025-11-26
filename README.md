@@ -1,0 +1,1 @@
+This is a computer vision project which uses YOLO11 deep learning architecture to identify digits on mechanical water meters and thus effectively automating the measuring process. The images are captured by a Esp32cam and the communication between the module and the server is done through http protocol.

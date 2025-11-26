@@ -12,6 +12,10 @@ __pycache__/
 .pyre/
 .python-version
 
+# Platformio / ESP32
+.pio/
+.vscode/ # Configuraciones locales de usuario
+
 # Virtual environments
 env/
 venv/
