@@ -12,10 +12,6 @@ __pycache__/
 .pyre/
 .python-version
 
-# Platformio / ESP32
-.pio/
-.vscode/
-
 # Virtual environments
 env/
 venv/
