@@ -4,14 +4,14 @@
 #include <HTTPClient.h>
 
 // ========================================
-// 1. Basic Config
+// 1. Configuracion basica
 // ========================================
-const char* ssid = "David Cortés";
-const char* password = "cortes04";
-String serverName = "http://172.20.10.8:8000/upload";
+const char* ssid = "XXXXX";
+const char* password = "XXXXX";
+String serverName = "http://IPAdress:8000/upload";
 
 // ========================================
-// 2. Pin Definition (AI-Thinker Standard Model)
+// 2. Definicion de pines (Modelo AI-Thinker)
 // ========================================
 #define PWDN_GPIO_NUM     32
 #define RESET_GPIO_NUM    -1
@@ -40,7 +40,7 @@ void setup() {
   pinMode(FLASH_NUM,OUTPUT);
 
   // ========================================
-  // 3. OV2640 Sensor Config
+  // 3. Configuracion de Sensor OV2640
   // ========================================
   camera_config_t config;
   config.ledc_channel = LEDC_CHANNEL_0;
@@ -77,7 +77,7 @@ void setup() {
     config.fb_count = 1;
   }
 
-  // Camera Init
+  // Iniciar camara
   esp_err_t err = esp_camera_init(&config);
   if (err != ESP_OK) {
     Serial.printf("Error iniciando camara: 0x%x\n", err);
@@ -85,7 +85,7 @@ void setup() {
     return;
   }
 
-  // Color Balance
+  // Balance de color
   sensor_t * s = esp_camera_sensor_get();
   if(s != NULL){
     s->set_whitebal(s,1);
@@ -94,7 +94,7 @@ void setup() {
   }
 
   // ========================================
-  // 4. WIFI Conection
+  // 4. Conexion WIFI
   // ========================================
   WiFi.begin(ssid, password);
   WiFi.setSleep(false);
@@ -111,7 +111,7 @@ void loop() {
   takeAndSendPhoto();
 
   Serial.println("Enfriando 15s...");
-  delay(5000);
+  delay(3600000); //Se define el intervalo de una hora (configurable)
 }
 
 void takeAndSendPhoto(){
@@ -119,8 +119,6 @@ void takeAndSendPhoto(){
     WiFi.reconnect();
     delay(500);
   }
-
-  //digitalWrite(PWDN_GPIO_NUM, LOW);
   delay(100);
 
   Serial.println("Calibrando luz...");
@@ -157,6 +155,4 @@ void takeAndSendPhoto(){
     digitalWrite(FLASH_NUM,HIGH); delay(100);
     digitalWrite(FLASH_NUM,LOW); delay(100);
   }
-  //Serial.println("Apagando sensor");
-  //digitalWrite(PWDN_GPIO_NUM, HIGH);
 }

@@ -19,14 +19,12 @@ CAPTURED_DIR.mkdir(parents=True, exist_ok=True)
 CSV_FILE = Path(__file__).parent / "../medidas_contador.csv"
 
 # Load Model
-model = YOLO(MODEL_PATH) 
+model = YOLO(MODEL_PATH)
 
 # Image processing and Inference
 def process_image_yolo(img_path:Path):
-    #processed_image = preprocessing.process_image(img_path)
-
-    #results = model(processed_image, conf=0.4, project=str(CAPTURED_DIR / "YOLO"),save=True)
-    results = model(img_path, conf=0.4, project=str(CAPTURED_DIR / "YOLO"),save=True)
+    processed_image = preprocessing.process_image(img_path)
+    results = model(processed_image, conf=0.4, project=str(CAPTURED_DIR / "YOLO"),save=True)
     detected = []
     for r in results:
         boxes = r.boxes
