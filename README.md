@@ -4,16 +4,16 @@ Este proyecto implementa un sistema prototipo para la digitalización de lectura
 
 ## 📋 Tabla de Contenidos
 
-1.  [Descripción del Flujo de Trabajo](#descripcion)
-2.  [Estructura del Proyecto](#estructura)
-3.  [Requisitos de Hardware y Software](#requisitos)
-4.  [Instalación y Configuración](#instalacion)
-5.  [Instrucciones de Uso](#instrucciones)
-6.  [Solución de Problemas Comunes](#problemas)
+1.  [Descripción del Flujo de Trabajo](#-descripción-del-flujo-de-trabajo)
+2.  [Estructura del Proyecto](#-estructura-del-proyecto)
+3.  [Requisitos de Hardware y Software](#-requisitos)
+4.  [Instalación y Configuración](#️-instalación-y-configuración)
+5.  [Instrucciones de Uso](#-instrucciones-de-uso)
+6.  [Solución de Problemas Comunes](#-solución-de-problemas-comunes)
 
 -----
 
-## 🔄 Descripción del Flujo de Trabajo {#descripcion}
+## 🔄 Descripción del Flujo de Trabajo
 
 El sistema opera en una modalidad de **Registro y Post-procesamiento (Batch Processing)**. El ciclo de vida del dato es el siguiente:
 
@@ -26,7 +26,7 @@ El sistema opera en una modalidad de **Registro y Post-procesamiento (Batch Proc
 
 -----
 
-## 📂 Estructura del Proyecto {#estructura}
+## 📂 Estructura del Proyecto
 
 El repositorio funciona como un *Monorepo*, conteniendo tanto el firmware como el software de análisis:
 
@@ -52,7 +52,7 @@ PROYECTO_CONTADOR/
 
 -----
 
-## 🛠 Requisitos {#requisitos}
+## 🛠 Requisitos
 
 ### Hardware
 
@@ -68,7 +68,7 @@ PROYECTO_CONTADOR/
 
 -----
 
-## ⚙️ Instalación y Configuración {#instalacion}
+## ⚙️ Instalación y Configuración
 
 ### 1\. Configurar el Firmware (ESP32)
 
@@ -95,7 +95,7 @@ PROYECTO_CONTADOR/
 
 -----
 
-## 🚀 Instrucciones de Uso {#instrucciones}
+## 🚀 Instrucciones de Uso
 
 ### Paso 1: Recolección de Datos (En Campo)
 
@@ -114,7 +114,7 @@ PROYECTO_CONTADOR/
 
 -----
 
-## ❓ Solución de Problemas Comunes {#problemas}
+## ❓ Solución de Problemas Comunes
 
 | Problema | Causa Probable | Solución |
 | :--- | :--- | :--- |
